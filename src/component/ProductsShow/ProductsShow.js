@@ -1,7 +1,7 @@
 import React from 'react';
 
-const ProductsShow = (props) => {
-    const { description, image, title, price } = props.product
+const ProductsShow = ({ product, cartClicked }) => {
+    const { description, image, title, price } = product
     return (
         <div className="col">
             <div className="card h-100">
@@ -13,7 +13,8 @@ const ProductsShow = (props) => {
                     <p className="card-text">{description.slice(0, 80)}...</p>
                     <h3>${price}</h3>
                     <div>
-                        <button className='btn btn-primary m-2'>Detials</button>
+                        <button className='btn btn-info text-white m-2'>Details</button>
+                        <button onClick={() => cartClicked()} className='btn btn-primary m-2'>Add to Cart</button>
                         <button className='btn btn-success m-2'>Buy Now</button>
                     </div>
                 </div>
