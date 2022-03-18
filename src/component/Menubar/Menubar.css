@@ -1,0 +1,12 @@
+.list {
+    list-style-type: none;
+    margin-left: 200px;
+}
+.list li{
+    margin-left: 40px;
+    border-bottom: 1px solid transparent;
+}
+.list li:hover{
+    cursor: pointer;
+    border-bottom: 1px solid white;
+}
